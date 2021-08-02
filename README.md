@@ -26,8 +26,8 @@ repos:
 
 Next, have every developer: 
 
-1. Install [pre-commit](http://pre-commit.com/). E.g. `brew install pre-commit`.
-1. Run `pre-commit install` in the repo.
+1. Install [pre-commit](http://pre-commit.com/). E.g. `brew install pre-commit`, `sudo apt install pre-commit` or in a python3 virtualenv `pip3 install pre-commit`
+3. Run `pre-commit install` in the repo.
 
 That’s it! Now every time you commit a code change (`.tf` file), the hooks in the `hooks:` config will execute.
 
