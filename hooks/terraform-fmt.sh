@@ -11,7 +11,7 @@ export PATH=$PATH:/usr/local/bin
 FMT_ERROR=0
 
 for file in "$@"; do
-  terraform fmt -diff -check "$file" || FMT_ERROR=$?
+  terraform fmt -diff "$file" || FMT_ERROR=$?
 done
 
 exit ${FMT_ERROR}
