@@ -22,6 +22,11 @@ repos:
       - id: terraform-validate
       - id: gofmt
       - id: golint
+  
+  - repo: https://github.com/PyCQA/flake8
+    rev: <VERSION> # Get the latest from: https://github.com/PyCQA/flake8/releases
+    hooks:
+    - id: flake8
 ```
 
 Next, have every developer: 
