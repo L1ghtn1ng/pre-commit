@@ -20,7 +20,4 @@ for dir in $(echo "$@" | xargs -n1 dirname | sort -u | uniq); do
   popd >/dev/null 
 done
 
-echo "--> Running 'terraform plan' to check for errors"
-terraform plan || VALIDATE_ERROR=$?
-
 exit ${VALIDATE_ERROR}
