@@ -18,6 +18,15 @@
   exclude: \.+.terraform\/.*$
   require_serial: true
 
+- id: terraform-plan
+  name: Terraform plan
+  description: Runs Terraform plan to check for errors
+  entry: hooks/terraform-plan.sh
+  language: script
+  files: \.tf$
+  exclude: \.+.terraform\/.*$
+  require_serial: true
+
 
 - id: gofmt
   name: gofmt
