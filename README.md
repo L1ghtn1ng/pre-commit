@@ -20,6 +20,7 @@ repos:
     hooks:
       - id: terraform-fmt
       - id: terraform-validate
+      - id: terraform-plan
       - id: gofmt
       - id: golint
   
