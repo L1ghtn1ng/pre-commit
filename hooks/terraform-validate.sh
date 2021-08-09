@@ -12,12 +12,15 @@ export TF_IN_AUTOMATION=1
 
 # Store and return last failure from validate so this can validate every directory passed before exiting
 VALIDATE_ERROR=0
+PLAN_ERROR=0
 
 for dir in $(echo "$@" | xargs -n1 dirname | sort -u | uniq); do
   echo "--> Running 'terraform validate' in directory '$dir'"
   pushd "$dir" >/dev/null
   terraform validate || VALIDATE_ERROR=$?
   popd >/dev/null
+  echo "--> Running 'terraform plan' to check for errors"
+  terraform validate || PLAN_ERROR=$? 
 done
 
 exit ${VALIDATE_ERROR}
