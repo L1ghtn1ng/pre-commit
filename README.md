@@ -28,6 +28,12 @@ repos:
     rev: <VERSION> # Get the latest from: https://github.com/PyCQA/flake8/releases
     hooks:
     - id: flake8
+  
+  - repo: https://github.com/aquasecurity/tfsec
+    rev: <VERSION> # Get the latest from: https://github.com/aquasecurity/tfsec/releases
+    hooks:
+    - id: tfsec
+
 ```
 
 Next, have every developer: 
