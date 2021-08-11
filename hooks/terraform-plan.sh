@@ -13,7 +13,7 @@ status=0
 terraform plan -no-color -detailed-exitcode || status=$?
 
 if (( status != 1 )); then
-     exit(0)
+     exit 0
 else
-    exit(1)
+    exit 1
 fi
