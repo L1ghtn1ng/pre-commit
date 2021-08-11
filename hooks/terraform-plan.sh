@@ -10,9 +10,9 @@ export TF_IN_AUTOMATION=1
 
 status=0
 
-terraform plan -no-color -detailed-exitcode || status=$?
+terraform plan -no-color || status=$?
 
-if (( status != 1 )); then
+if [ ${status} -ne 1 ]; then
      exit 0
 else
     exit 1
