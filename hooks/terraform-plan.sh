@@ -8,4 +8,12 @@ set -e
 export PATH=$PATH:/usr/local/bin
 export TF_IN_AUTOMATION=1
 
-terraform plan -detailed-exitcode
+status=0
+
+terraform plan -no-color -detailed-exitcode || status=$?
+
+if (( status != 1 )); then
+     exit(0)
+else
+    exit(1)
+fi
