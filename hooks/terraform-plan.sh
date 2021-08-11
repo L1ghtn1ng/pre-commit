@@ -8,7 +8,7 @@ set -e
 export PATH=$PATH:/usr/local/bin
 export TF_IN_AUTOMATION=1
 
-status=0
+local status=0
 
 terraform plan -no-color || status=$?
 
