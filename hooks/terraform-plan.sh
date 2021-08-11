@@ -12,7 +12,7 @@ status=0
 
 terraform plan -no-color || status=$?
 
-if [ ${status} -ne 1 ]; then
+if [ $status != 1 ]; then
      exit 0
 else
     exit 1
